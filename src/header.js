@@ -30,8 +30,8 @@ function Header () {
             <pan className='nav_itemLineTwo'>Shop</pan>
           </div>
 
-          <div className='nav_item'>
-          <ShoppingBasketIcon className='itemBasket'/>
+          <div className='nav_itemBasket'>
+          <ShoppingBasketIcon/>
           <span className='nav_itemLineTwo nav_basketCount' >0</span>
           </div>
           

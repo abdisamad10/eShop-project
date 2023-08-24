@@ -15,10 +15,10 @@ function Home () {
                     <Product 
                     Id = "123321"
                     Title="Bannet Mystic 15.5 inch Laptop Shoulder Messager Sling Office Bag, Water repellennt 
-                    Fabric for Men and Woman (Blue) and you can get different colors in here"
+                    Fabric for Men and Woman (Blue) and you get different colors "
                     Price = {11.99}
                     Rating = {5}
-                    Image = "https://images-na.ssl-images-amazon.com/images/I/71mEsHyzSCL._SL1000_.jpg"
+                    Image ="https://images-na.ssl-images-amazon.com/images/I/71mEsHyzSCL._SL1000_.jpg"
                     /> 
                     <Product
                     Id= "213132"
@@ -46,7 +46,7 @@ function Home () {
                     />
                     <Product 
                      Id= "543453"
-                     Title= "Apple - 11-Inch iPad Pro with Wi-Fi - 128GB - Space Gray"
+                     Title= "Apple - 11-Inch iPad Pro with Wi-Fi - 128GB - Space Gray , The product is refurbished and you get original"
                      Price={25}
                      Rating={4}
                      Image="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4265/4265400_sd.jpg"
@@ -54,13 +54,14 @@ function Home () {
                </div>
 
                <div className='home_row'>
-               <Product
+               <Product className="row-six"
                Id= "654654"
-               Title= "49 ігровий монітор серії CHG90 C49HG90DMN"
+               Title= "49 ігровий монітор серії CHG90 C49HG90DMN SAMSUNG Monitor Gamer Curvo Odyssey 49 , DQHD, tela super ultrawide, 120Hz, HDMI, DP, USB, Freesync, com ajuste de altura, preto, série RG90    "
                Price={804}
                Rating={5}
-               Image="https://images.samsung.com/is/image/samsung/ua-c49hg90-lc49hg90dmnxza-frontblack-77686542?$650_519_PNG$"
+               Image= "https://m.media-amazon.com/images/I/81D0P3gTssL._AC_UF894,1000_QL80_.jpg"
                />
+
               </div>
 
             </div>

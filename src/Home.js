@@ -26,7 +26,9 @@ function Home () {
                     Price = {35}
                     Rating = {4}
                     Image = "https://detec.in/cdn/shop/products/2_56f96d11-8134-49ed-9cc5-d2cba120aca3.jpg?v=1634110082"
-                     />
+                    
+                    />
+
                 </div>
                     
                 <div className='home_row' >

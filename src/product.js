@@ -1,13 +1,11 @@
-import './product.css';
-import { useStateValue } from './StateProvider';
+import './Product.css';
+import { UseStateValue} from './StateProvider';
 
 function product ({Id, Title, Price, Rating, Image }){
-
-    const [state, dispatch]  = useStateValue();
-
+    const [state, dispatch]  = UseStateValue(); 
     const addToBasket = () => {
         dispatch({
-            type: "ADD_TO-BASKET",
+            type: "ADD_TO_BASKET",
             item: {
                 Id: Id,
                 Image: Image,

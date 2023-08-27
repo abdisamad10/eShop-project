@@ -1,26 +1,39 @@
 import React from 'react'
 import './CheckoutProduct';
 import './CheckoutProduct.css';
+import { UseStateValue } from './StateProvider';
 
-function CheckoutProduct() {
+function CheckoutProduct({Image, Id, Price, Rating, Title}) {
+  const [{basket}, dispatch] = UseStateValue();
+
+  const removeFromBasket = () => {
+      dispatch({
+        type: "REMOVE_FROM_BASKET",
+        Id : Id,
+      })
+  }
   return (
     <div className='checkoutProduct'>
-      <img src='https://images-na.ssl-images-amazon.com/images/I/71mEsHyzSCL._SL1000_.jpg' alt='' 
+      <img src={Image} alt='' 
       className='checkoutProduct_image' />
 
       <div className='checkoutProduct_info'>
         <p className='checkoutProduct_title'> 
-          Bannet Mystic 15.5 inch Laptop Shoulder Messager Sling Office Bag, Water repellennt Fabric for Men and Woman (Blue) <br /> and you get different colors
+        Title
         </p>
         <p className='checkoutProduct_price'>
         <small>$</small>
-        <strong>20</strong>
+        <strong>{Price}</strong>
         </p>
 
         <div className='checkouProduct_rating'>
-          ⭐⭐
+             {Array(Rating)
+                 .fill()
+                 .map((_, i) => (
+                  <p>⭐</p>
+             ))}
         </div>
-        <button>Remove from Basket</button>
+        <button onClick={removeFromBasket}>Remove from Basket</button>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import './Product.css';
+import './product.css';
 import { UseStateValue} from './StateProvider';
 
 function product ({Id, Title, Price, Rating, Image }){

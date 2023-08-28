@@ -1,6 +1,7 @@
-import firebase from './Firebase';
+import {initializeApp} from 'firebase/app';
+import {getAuth} from 'firebase/auth';
 
- const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyBKU7ekqMnFcQ0OYy5aJhJ8MKE50f8i8qk",
     authDomain: "eshop-9941a.firebaseapp.com",
     projectId: "eshop-9941a",
@@ -10,10 +11,8 @@ import firebase from './Firebase';
     measurementId: "G-TFTG5LY83M"
   };
 
-   const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-  export const db = firebaseApp.firestore();
-  
-  export const auth = firebase.auth();
+  const App = initializeApp(firebaseConfig);
 
-  export default firebase;
+
+  export const auth =getAuth(App);

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import './Login.css'
-import { Link, useNavigate  } from "react-router-dom";
+import './Login.css';
+import { Link, useNavigate,  } from "react-router-dom";
 import StorefrontIcon from '@mui/icons-material/Storefront';
-import { auth } from './Firebase';
 
 function Login() {
-
     const history = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-     const signIn = e => {
+    const signIn = e => {
         e.preventDefault();
 
         auth
@@ -18,22 +16,23 @@ function Login() {
             .then(auth => {
                 history.push('/');
             })
-            .catch(error => alert(error.message));
-     }
+            .catch(error => alert(error.message))
 
-     const register = e => {
+    }
+
+    const register = e => {
         e.preventDefault();
 
         auth
             .createUserWithEmailAndPassword(email, password)
-            .then(auth => {
-                if(auth){
+            .then((auth) => {
+                if (auth) {
                     history.push('/');
                 }
-               
             })
-            .catch(error => alert(error.message));
-     }
+            .catch(error => alert(error.message))
+
+    }
 
     return (
         <div className='login'> 
